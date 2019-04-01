@@ -1,12 +1,15 @@
 class LinkedList {
 
-  constructor(data) {
-    this.head = new Node(data)
+  constructor() {
+    this.head = null
     this.size = 0
   }
 
   addToHead(data) {
-    let node = new Node(data)
+    let node = new Node(data, this.head)
+
+    this.head = node
+    this.length += 1
   }
 
   removeFromHead() {
@@ -30,7 +33,7 @@ class LinkedList {
 class Node {
 
   constructor(data, next) {
-    this.data = data || null
+    this.data = data
     this.next = next
   }
 

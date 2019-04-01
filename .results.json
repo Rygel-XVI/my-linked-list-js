@@ -1,32 +1,32 @@
 {
   "stats": {
-    "suites": 1,
+    "suites": 3,
     "tests": 3,
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2019-04-01T00:34:48.355Z",
-    "end": "2019-04-01T00:34:48.361Z",
-    "duration": 6
+    "start": "2019-04-01T03:17:18.374Z",
+    "end": "2019-04-01T03:17:18.379Z",
+    "duration": 5
   },
   "tests": [
     {
-      "title": "should create an instance of the LinkedList class with size 0",
-      "fullTitle": "LinkedList should create an instance of the LinkedList class with size 0",
+      "title": "should create an instance of the LinkedList",
+      "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should instatiate with a Node as the head",
-      "fullTitle": "LinkedList should instatiate with a Node as the head",
+      "title": "it should initialize with a size of 0",
+      "fullTitle": "LinkedList constructor it should initialize with a size of 0",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "instantiates with the data as null if no data is given",
-      "fullTitle": "LinkedList instantiates with the data as null if no data is given",
+      "title": "creates a new Node at the head",
+      "fullTitle": "LinkedList addToHead creates a new Node at the head",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
@@ -36,22 +36,22 @@
   "failures": [],
   "passes": [
     {
-      "title": "should create an instance of the LinkedList class with size 0",
-      "fullTitle": "LinkedList should create an instance of the LinkedList class with size 0",
+      "title": "should create an instance of the LinkedList",
+      "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "should instatiate with a Node as the head",
-      "fullTitle": "LinkedList should instatiate with a Node as the head",
+      "title": "it should initialize with a size of 0",
+      "fullTitle": "LinkedList constructor it should initialize with a size of 0",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
-      "title": "instantiates with the data as null if no data is given",
-      "fullTitle": "LinkedList instantiates with the data as null if no data is given",
+      "title": "creates a new Node at the head",
+      "fullTitle": "LinkedList addToHead creates a new Node at the head",
       "duration": 0,
       "currentRetry": 0,
       "err": {}

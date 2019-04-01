@@ -18,19 +18,32 @@ describe('LinkedList', function() {
   let list1
   let list2
 
-  before(() => {
-    list1 = new LinkedList
+  describe('constructor', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
+
+    it('should create an instance of the LinkedList', function() {
+      expect(list1).to.be.instanceof(LinkedList);
+    });
+
+    it('it should initialize with a size of 0', function() {
+      expect(list1.size).to.equal(0);
+    });
   })
 
-  it('should create an instance of the LinkedList class with size 0', function() {
-    expect(list1.size).to.equal(0);
-  });
+  describe('addToHead', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
 
-  it('should instatiate with a Node as the head', function() {
-    expect(list1.head).to.be.instanceof(Node);
+    it('creates a new Node at the head', function() {
+      list1.addToHead("first node")
+      expect(list1.head).to.be.instanceof(Node)
+    })
+
   })
 
-  it('instantiates with the data as null if no data is given', function() {
-    expect(list1.head.data).to.equal(null);
-  })
 });
