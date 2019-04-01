@@ -84,12 +84,12 @@ describe('LinkedList', function() {
     before(() => {
       list1 = new LinkedList
       list2 = new LinkedList
-    })
-
-    it('returns a node if the data exists in a node', function() {
       list1.addToHead("first node")
       list1.addToHead("second node")
       list1.addToHead("third node")
+    })
+
+    it('returns a node if the data exists in a node', function() {
       expect(list1.find("second node", list1.head)).to.be.instanceof(Node)
     })
 
@@ -101,6 +101,26 @@ describe('LinkedList', function() {
       expect(list1.find("2", list1.head)).to.be.equal(null)
     })
 
+  })
+
+  describe('remove', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+      list1.addToHead("first node")
+      list1.addToHead("second node")
+      list1.addToHead("third node")
+    })
+
+    it('finds the node with the corresponding data and removes it', function() {
+      list1.remove("second node")
+      expect(list1.find("second node")).to.be.equal(null)
+      expect(list1.find("third node").next.data).to.be.equal("first node")
+    })
+
+    it('changes the next pointer so that the linkedlist isn\'t broken', function() {
+      expect(list1.find("third node").next.data).to.be.equal("first node")
+    })
   })
 
 });
