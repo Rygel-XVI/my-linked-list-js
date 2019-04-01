@@ -1,19 +1,19 @@
 {
   "stats": {
-    "suites": 3,
-    "tests": 3,
-    "passes": 3,
+    "suites": 4,
+    "tests": 8,
+    "passes": 6,
     "pending": 0,
-    "failures": 0,
-    "start": "2019-04-01T03:17:18.374Z",
-    "end": "2019-04-01T03:17:18.379Z",
-    "duration": 5
+    "failures": 2,
+    "start": "2019-04-01T03:43:02.648Z",
+    "end": "2019-04-01T03:43:02.660Z",
+    "duration": 12
   },
   "tests": [
     {
       "title": "should create an instance of the LinkedList",
       "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -25,20 +25,94 @@
       "err": {}
     },
     {
-      "title": "creates a new Node at the head",
-      "fullTitle": "LinkedList addToHead creates a new Node at the head",
+      "title": "it should initialize with head.data equal to null",
+      "fullTitle": "LinkedList constructor it should initialize with head.data equal to null",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
+    },
+    {
+      "title": "creates a new Node at the head",
+      "fullTitle": "LinkedList addToHead creates a new Node at the head",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "it increments length by 1",
+      "fullTitle": "LinkedList addToHead it increments length by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "adds data to the node (new head)",
+      "fullTitle": "LinkedList addToHead adds data to the node (new head)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "reduces the size by 1",
+      "fullTitle": "LinkedList removeFromHead reduces the size by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 2 to equal 1",
+        "showDiff": true,
+        "actual": "2",
+        "expected": "1",
+        "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (test/index-test.js:71:32)"
+      }
+    },
+    {
+      "title": "removes the most recenly added node",
+      "fullTitle": "LinkedList removeFromHead removes the most recenly added node",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 'second node' to equal 'data'",
+        "showDiff": true,
+        "actual": "second node",
+        "expected": "data",
+        "stack": "AssertionError: expected 'second node' to equal 'data'\n    at Context.<anonymous> (test/index-test.js:75:37)"
+      }
     }
   ],
   "pending": [],
-  "failures": [],
+  "failures": [
+    {
+      "title": "reduces the size by 1",
+      "fullTitle": "LinkedList removeFromHead reduces the size by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 2 to equal 1",
+        "showDiff": true,
+        "actual": "2",
+        "expected": "1",
+        "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (test/index-test.js:71:32)"
+      }
+    },
+    {
+      "title": "removes the most recenly added node",
+      "fullTitle": "LinkedList removeFromHead removes the most recenly added node",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {
+        "message": "expected 'second node' to equal 'data'",
+        "showDiff": true,
+        "actual": "second node",
+        "expected": "data",
+        "stack": "AssertionError: expected 'second node' to equal 'data'\n    at Context.<anonymous> (test/index-test.js:75:37)"
+      }
+    }
+  ],
   "passes": [
     {
       "title": "should create an instance of the LinkedList",
       "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -50,8 +124,29 @@
       "err": {}
     },
     {
+      "title": "it should initialize with head.data equal to null",
+      "fullTitle": "LinkedList constructor it should initialize with head.data equal to null",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "creates a new Node at the head",
       "fullTitle": "LinkedList addToHead creates a new Node at the head",
+      "duration": 1,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "it increments length by 1",
+      "fullTitle": "LinkedList addToHead it increments length by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "adds data to the node (new head)",
+      "fullTitle": "LinkedList addToHead adds data to the node (new head)",
       "duration": 0,
       "currentRetry": 0,
       "err": {}

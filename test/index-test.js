@@ -31,6 +31,10 @@ describe('LinkedList', function() {
     it('it should initialize with a size of 0', function() {
       expect(list1.size).to.equal(0);
     });
+
+    it('it should initialize with head.data equal to null', function() {
+      expect(list2.head).to.equal(null)
+    })
   })
 
   describe('addToHead', function() {
@@ -48,6 +52,28 @@ describe('LinkedList', function() {
       expect(list1.size).to.be.equal(1)
     })
 
+    it('adds data to the node (new head)', function() {
+      expect(list1.head.data).to.be.equal("first node")
+    })
+
+  })
+
+  describe('removeFromHead', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
+
+    it('reduces the size by 1', function() {
+      list1.addToHead("first node")
+      list1.addToHead("second node")
+      list1.removeFromHead()
+      expect(list1.size).to.be.equal(1)
+    })
+
+    it('removes the most recenly added node', function() {
+      expect(list1.head.data).to.be.equal("data")
+    })
   })
 
 });
