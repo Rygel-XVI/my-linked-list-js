@@ -19,11 +19,11 @@ class LinkedList {
     }
   }
 
-  insertAt() {
+  insertBefore() {
 
   }
 
-  removeAt() {
+  remove(data) {
 
   }
 
