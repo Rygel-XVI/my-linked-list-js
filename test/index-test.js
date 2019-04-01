@@ -142,7 +142,7 @@ describe('LinkedList', function() {
     })
 
     it('reduces the size by 1', function() {
-      expect(list1.size).to.be.equal(1)
+      expect(list1.size).to.be.equal(2)
     })
   })
 

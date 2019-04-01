@@ -24,7 +24,7 @@ class LinkedList {
   }
 
   remove(data) {
-    let target
+    let target = false
     let current = this.head
     if (current.data == this.head) {
       removeFromHead()
@@ -37,9 +37,12 @@ class LinkedList {
           current = current.next
         }
       }
-
-      target.next = target.next.next
-      this.size -= 1
+      if (target != false) {
+        target.next = target.next.next
+        this.size -= 1
+      } else {
+        return 'node not found'
+      }
     }
   }
 
