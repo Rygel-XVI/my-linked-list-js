@@ -1,0 +1,60 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-04-01T00:34:48.355Z",
+    "end": "2019-04-01T00:34:48.361Z",
+    "duration": 6
+  },
+  "tests": [
+    {
+      "title": "should create an instance of the LinkedList class with size 0",
+      "fullTitle": "LinkedList should create an instance of the LinkedList class with size 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should instatiate with a Node as the head",
+      "fullTitle": "LinkedList should instatiate with a Node as the head",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "instantiates with the data as null if no data is given",
+      "fullTitle": "LinkedList instantiates with the data as null if no data is given",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should create an instance of the LinkedList class with size 0",
+      "fullTitle": "LinkedList should create an instance of the LinkedList class with size 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "should instatiate with a Node as the head",
+      "fullTitle": "LinkedList should instatiate with a Node as the head",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "instantiates with the data as null if no data is given",
+      "fullTitle": "LinkedList instantiates with the data as null if no data is given",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    }
+  ]
+}
