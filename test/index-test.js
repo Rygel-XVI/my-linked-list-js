@@ -1,16 +1,15 @@
-// const assert = require('chai').assert;
 const expect = require('chai').expect;
 // const sinon = require('sinon');
 // const should = require('should');
 // const sinonTest = require('sinon-test');
 // var chai = require('chai');
-const assert = require("assert");
+// const assert = require("assert");
 const LinkedList = require("../index.js").LinkedList
 const Node = require("../index.js").Node
 
-const chai = require('chai');
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
+// const chai = require('chai');
+// const sinon = require('sinon');
+// const sinonChai = require('sinon-chai');
 
 
 
@@ -71,9 +70,11 @@ describe('LinkedList', function() {
       expect(list1.size).to.be.equal(1)
     })
 
-    it('removes the most recenly added node', function() {
-      expect(list1.head.data).to.be.equal("data")
+    it('removes the most recently added node', function() {
+      expect(list1.head.data).to.be.equal("first node")
     })
+
+    //add tests for if size == 0
   })
 
 });

@@ -13,7 +13,8 @@ class LinkedList {
   }
 
   removeFromHead() {
-
+    this.head = this.head.next
+    this.size -= 1
   }
 
   insertAt() {
