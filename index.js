@@ -6,10 +6,14 @@ class LinkedList {
   }
 
   addToHead(data) {
-    let node = new Node(data, this.head)
+    if (!!data) {
+      let node = new Node(data, this.head)
 
-    this.head = node
-    this.size += 1
+      this.head = node
+      this.size += 1
+    } else {
+      return "needs data as arg"
+    }
   }
 
   removeFromHead() {
@@ -17,10 +21,6 @@ class LinkedList {
       this.head = this.head.next
       this.size -= 1
     }
-  }
-
-  insertBefore() {
-
   }
 
   remove(data) {

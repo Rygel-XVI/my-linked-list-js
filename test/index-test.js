@@ -55,6 +55,10 @@ describe('LinkedList', function() {
       expect(list1.head.data).to.be.equal("first node")
     })
 
+    it('does nothing if no data is give', function() {
+      expect(list1.addToHead()).to.be.equal("needs data as arg")
+    })
+
   })
 
   describe('removeFromHead', function() {
