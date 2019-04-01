@@ -13,8 +13,10 @@ class LinkedList {
   }
 
   removeFromHead() {
-    this.head = this.head.next
-    this.size -= 1
+    if (this.size != 0) {
+      this.head = this.head.next
+      this.size -= 1
+    }
   }
 
   insertAt() {
@@ -25,8 +27,14 @@ class LinkedList {
 
   }
 
-  find() {
-
+  find(data, current) {
+    while (current.next != null) {
+      if (current.data === data) {
+        return current
+      } else {
+        current = current.next
+      }
+    }
   }
 
 }

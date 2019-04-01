@@ -74,7 +74,29 @@ describe('LinkedList', function() {
       expect(list1.head.data).to.be.equal("first node")
     })
 
-    //add tests for if size == 0
+    it('does not do anything if size is already 0', function() {
+      list2.removeFromHead()
+      expect(list2.size).to.be.equal(0)
+    })
+  })
+
+  describe('find', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
+
+    it('returns a node if the data exists in a node', function() {
+      list1.addToHead("first node")
+      list1.addToHead("second node")
+      list1.addToHead("third node")
+      expect(list1.find("second node", list1.head)).to.be.instanceof(Node)
+    })
+
+    it('returns null if no node with the data is found', function() {
+      expect(list1.find("2", list1.head).data).to.be.equal(null)
+    })
+
   })
 
 });
