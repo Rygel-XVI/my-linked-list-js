@@ -24,10 +24,16 @@ class LinkedList {
   }
 
   remove(data) {
-
+    let target = find(data, current)
+    if (target == this.head) {
+      removeFromHead()
+    } else {
+      // move prev
+    }
   }
 
-  find(data, current) {
+  find(data) {
+    let current = this.head
     while (current.next != null) {
       if (current.data === data) {
         return current

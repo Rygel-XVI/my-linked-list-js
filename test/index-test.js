@@ -8,8 +8,8 @@ const LinkedList = require("../index.js").LinkedList
 const Node = require("../index.js").Node
 
 // const chai = require('chai');
-// const sinon = require('sinon');
-// const sinonChai = require('sinon-chai');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
 
 
 
@@ -91,18 +91,23 @@ describe('LinkedList', function() {
       list1.addToHead("first node")
       list1.addToHead("second node")
       list1.addToHead("third node")
+      list1.addToHead("fourth node")
     })
 
     it('returns a node if the data exists in a node', function() {
-      expect(list1.find("second node", list1.head)).to.be.instanceof(Node)
+      expect(list1.find("second node")).to.be.instanceof(Node)
     })
 
     it('returns the node with the data you are looking for', function() {
-      expect(list1.find("second node", list1.head).data).to.be.equal('second node')
+      expect(list1.find("second node").data).to.be.equal('second node')
     })
 
     it('returns null if no node with the data is found', function() {
-      expect(list1.find("2", list1.head)).to.be.equal(null)
+      expect(list1.find("2")).to.be.equal(null)
+    })
+
+    it('returns the head if that is the one we want', function() {
+      expect(list1.find(list1.head.data).data).to.be.equal(list1.head.data)
     })
 
   })
@@ -124,6 +129,20 @@ describe('LinkedList', function() {
 
     it('changes the next pointer so that the linkedlist isn\'t broken', function() {
       expect(list1.find("third node").next.data).to.be.equal("first node")
+    })
+
+    it('returns node not found if !node', function() {
+      expect(list1.remove("i dont exist!")).to.be.equal('node not found')
+    })
+
+    it('if node is at head it calls #removeFromHead', function() {
+      var spy = sinon.spy(LinkedList, "removeFromHead")
+      list1.remove(list1.head.data)
+      assert(spy.calledOnce);
+    })
+
+    it('reduces the size by 1', function() {
+      expect(list1.size).to.be.equal(1)
     })
   })
 
