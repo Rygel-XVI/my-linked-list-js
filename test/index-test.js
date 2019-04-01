@@ -44,6 +44,10 @@ describe('LinkedList', function() {
       expect(list1.head).to.be.instanceof(Node)
     })
 
+    it('it increments length by 1', function() {
+      expect(list1.size).to.be.equal(1)
+    })
+
   })
 
 });

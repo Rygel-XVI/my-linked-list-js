@@ -9,7 +9,7 @@ class LinkedList {
     let node = new Node(data, this.head)
 
     this.head = node
-    this.length += 1
+    this.size += 1
   }
 
   removeFromHead() {
