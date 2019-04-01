@@ -24,11 +24,22 @@ class LinkedList {
   }
 
   remove(data) {
-    let target = find(data, current)
-    if (target == this.head) {
+    let target
+    let current = this.head
+    if (current.data == this.head) {
       removeFromHead()
     } else {
-      // move prev
+      while (current.next != null) {
+       if (current.next.data === data) {
+          target = current
+          break
+        } else {
+          current = current.next
+        }
+      }
+
+      target.next = target.next.next
+      this.size -= 1
     }
   }
 
