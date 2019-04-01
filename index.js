@@ -35,6 +35,7 @@ class LinkedList {
         current = current.next
       }
     }
+    return null
   }
 
 }

@@ -93,8 +93,12 @@ describe('LinkedList', function() {
       expect(list1.find("second node", list1.head)).to.be.instanceof(Node)
     })
 
+    it('returns the node with the data you are looking for', function() {
+      expect(list1.find("second node", list1.head).data).to.be.equal('second node')
+    })
+
     it('returns null if no node with the data is found', function() {
-      expect(list1.find("2", list1.head).data).to.be.equal(null)
+      expect(list1.find("2", list1.head)).to.be.equal(null)
     })
 
   })
