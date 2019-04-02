@@ -12,7 +12,7 @@ class LinkedList {
       this.head = node
       this.size += 1
     } else {
-      return "needs data as arg"
+      return null
     }
   }
 

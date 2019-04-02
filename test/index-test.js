@@ -3,13 +3,13 @@ const expect = require('chai').expect;
 // const should = require('should');
 // const sinonTest = require('sinon-test');
 // var chai = require('chai');
-const assert = require("assert");
+// const assert = require("assert");
 const LinkedList = require("../index.js").LinkedList
 const Node = require("../index.js").Node
 
 // const chai = require('chai');
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
+// const sinon = require('sinon');
+// const sinonChai = require('sinon-chai');
 
 
 
@@ -56,7 +56,7 @@ describe('LinkedList', function() {
     })
 
     it('does nothing if no data is give', function() {
-      expect(list1.addToHead()).to.be.equal("needs data as arg")
+      expect(list1.addToHead()).to.be.equal(null)
     })
 
   })
