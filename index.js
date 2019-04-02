@@ -26,8 +26,8 @@ class LinkedList {
   remove(data) {
     let target = false
     let current = this.head
-    if (current.data == this.head) {
-      removeFromHead()
+    if (data == this.head.data) {
+      this.removeFromHead()
     } else {
       while (current.next != null) {
        if (current.next.data === data) {

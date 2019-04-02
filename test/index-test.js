@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 // const should = require('should');
 // const sinonTest = require('sinon-test');
 // var chai = require('chai');
-// const assert = require("assert");
+const assert = require("assert");
 const LinkedList = require("../index.js").LinkedList
 const Node = require("../index.js").Node
 
@@ -124,7 +124,6 @@ describe('LinkedList', function() {
     it('finds the node with the corresponding data and removes it', function() {
       list1.remove("second node")
       expect(list1.find("second node")).to.be.equal(null)
-      expect(list1.find("third node").next.data).to.be.equal("first node")
     })
 
     it('changes the next pointer so that the linkedlist isn\'t broken', function() {
@@ -136,13 +135,13 @@ describe('LinkedList', function() {
     })
 
     it('if node is at head it calls #removeFromHead', function() {
-      var spy = sinon.spy(LinkedList, "removeFromHead")
+      let prevHead = list1.head
       list1.remove(list1.head.data)
-      assert(spy.calledOnce);
+      expect(list1.head.data).to.not.equal(prevHead.data)
     })
 
     it('reduces the size by 1', function() {
-      expect(list1.size).to.be.equal(2)
+      expect(list1.size).to.be.equal(1)
     })
   })
 
