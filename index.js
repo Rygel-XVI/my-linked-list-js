@@ -17,6 +17,32 @@ class LinkedList {
   }
 
   //implement #addToTail()
+  addToTail(data) {
+    let current
+    let node
+    if (!!data) {
+      current = this.head
+
+      while (current !== null) {
+
+        if (current.next === null) {
+          node = new Node(data, null)
+          current.next = node
+          break
+        }
+        current = current.next
+      }
+
+      if (this.head === null) {
+        node = new Node(data, this.head)
+        this.head = node
+      }
+
+      this.size += 1
+    } else {
+      return null
+    }
+  }
 
   //implement #insert(data, index)
 

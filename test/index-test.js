@@ -159,9 +159,15 @@ describe('LinkedList', function() {
       list2 = new LinkedList
     })
 
+    it('returns null if no data is given', function() {
+      expect(list1.addToTail()).to.be.equal(null)
+    })
+
     it('increments the size by 1', function() {
-      expect(list1.addToTail("first").size).to.be.equal(1)
-      expect(list1.addToTail('second').size).to.be.equal(2)
+      list1.addToTail("first")
+      expect(list1.size).to.be.equal(1)
+      list1.addToTail('second')
+      expect(list1.size).to.be.equal(2)
     })
 
     it('contains nodes with the data in the list', function() {
