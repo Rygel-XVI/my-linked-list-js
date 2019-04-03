@@ -134,7 +134,7 @@ describe('LinkedList', function() {
       expect(list1.remove("i dont exist!")).to.be.equal('node not found')
     })
 
-    it('if node is at head it calls #removeFromHead', function() {
+    it('works when node is at head', function() {
       let prevHead = list1.head
       list1.remove(list1.head.data)
       expect(list1.head.data).to.not.equal(prevHead.data)
@@ -142,6 +142,10 @@ describe('LinkedList', function() {
 
     it('reduces the size by 1', function() {
       expect(list1.size).to.be.equal(1)
+    })
+
+    it('works when head = null', function() {
+      expect(list2.remove("data")).to.be.equal('list is empty')
     })
   })
 

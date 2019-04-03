@@ -1,19 +1,19 @@
 {
   "stats": {
-    "suites": 4,
-    "tests": 8,
-    "passes": 6,
+    "suites": 6,
+    "tests": 19,
+    "passes": 19,
     "pending": 0,
-    "failures": 2,
-    "start": "2019-04-01T03:43:02.648Z",
-    "end": "2019-04-01T03:43:02.660Z",
+    "failures": 0,
+    "start": "2019-04-02T00:32:08.304Z",
+    "end": "2019-04-02T00:32:08.316Z",
     "duration": 12
   },
   "tests": [
     {
       "title": "should create an instance of the LinkedList",
       "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -34,7 +34,7 @@
     {
       "title": "creates a new Node at the head",
       "fullTitle": "LinkedList addToHead creates a new Node at the head",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -53,66 +53,104 @@
       "err": {}
     },
     {
+      "title": "does nothing if no data is give",
+      "fullTitle": "LinkedList addToHead does nothing if no data is give",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "reduces the size by 1",
       "fullTitle": "LinkedList removeFromHead reduces the size by 1",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "message": "expected 2 to equal 1",
-        "showDiff": true,
-        "actual": "2",
-        "expected": "1",
-        "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (test/index-test.js:71:32)"
-      }
+      "err": {}
     },
     {
-      "title": "removes the most recenly added node",
-      "fullTitle": "LinkedList removeFromHead removes the most recenly added node",
-      "duration": 1,
+      "title": "removes the most recently added node",
+      "fullTitle": "LinkedList removeFromHead removes the most recently added node",
+      "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "message": "expected 'second node' to equal 'data'",
-        "showDiff": true,
-        "actual": "second node",
-        "expected": "data",
-        "stack": "AssertionError: expected 'second node' to equal 'data'\n    at Context.<anonymous> (test/index-test.js:75:37)"
-      }
+      "err": {}
+    },
+    {
+      "title": "does not do anything if size is already 0",
+      "fullTitle": "LinkedList removeFromHead does not do anything if size is already 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns a node if the data exists in a node",
+      "fullTitle": "LinkedList find returns a node if the data exists in a node",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the node with the data you are looking for",
+      "fullTitle": "LinkedList find returns the node with the data you are looking for",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns null if no node with the data is found",
+      "fullTitle": "LinkedList find returns null if no node with the data is found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the head if that is the one we want",
+      "fullTitle": "LinkedList find returns the head if that is the one we want",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "finds the node with the corresponding data and removes it",
+      "fullTitle": "LinkedList remove finds the node with the corresponding data and removes it",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "changes the next pointer so that the linkedlist isn't broken",
+      "fullTitle": "LinkedList remove changes the next pointer so that the linkedlist isn't broken",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns node not found if !node",
+      "fullTitle": "LinkedList remove returns node not found if !node",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "if node is at head it calls #removeFromHead",
+      "fullTitle": "LinkedList remove if node is at head it calls #removeFromHead",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "reduces the size by 1",
+      "fullTitle": "LinkedList remove reduces the size by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
     }
   ],
   "pending": [],
-  "failures": [
-    {
-      "title": "reduces the size by 1",
-      "fullTitle": "LinkedList removeFromHead reduces the size by 1",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected 2 to equal 1",
-        "showDiff": true,
-        "actual": "2",
-        "expected": "1",
-        "stack": "AssertionError: expected 2 to equal 1\n    at Context.<anonymous> (test/index-test.js:71:32)"
-      }
-    },
-    {
-      "title": "removes the most recenly added node",
-      "fullTitle": "LinkedList removeFromHead removes the most recenly added node",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {
-        "message": "expected 'second node' to equal 'data'",
-        "showDiff": true,
-        "actual": "second node",
-        "expected": "data",
-        "stack": "AssertionError: expected 'second node' to equal 'data'\n    at Context.<anonymous> (test/index-test.js:75:37)"
-      }
-    }
-  ],
+  "failures": [],
   "passes": [
     {
       "title": "should create an instance of the LinkedList",
       "fullTitle": "LinkedList constructor should create an instance of the LinkedList",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -133,7 +171,7 @@
     {
       "title": "creates a new Node at the head",
       "fullTitle": "LinkedList addToHead creates a new Node at the head",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -147,6 +185,97 @@
     {
       "title": "adds data to the node (new head)",
       "fullTitle": "LinkedList addToHead adds data to the node (new head)",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "does nothing if no data is give",
+      "fullTitle": "LinkedList addToHead does nothing if no data is give",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "reduces the size by 1",
+      "fullTitle": "LinkedList removeFromHead reduces the size by 1",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "removes the most recently added node",
+      "fullTitle": "LinkedList removeFromHead removes the most recently added node",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "does not do anything if size is already 0",
+      "fullTitle": "LinkedList removeFromHead does not do anything if size is already 0",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns a node if the data exists in a node",
+      "fullTitle": "LinkedList find returns a node if the data exists in a node",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the node with the data you are looking for",
+      "fullTitle": "LinkedList find returns the node with the data you are looking for",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns null if no node with the data is found",
+      "fullTitle": "LinkedList find returns null if no node with the data is found",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns the head if that is the one we want",
+      "fullTitle": "LinkedList find returns the head if that is the one we want",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "finds the node with the corresponding data and removes it",
+      "fullTitle": "LinkedList remove finds the node with the corresponding data and removes it",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "changes the next pointer so that the linkedlist isn't broken",
+      "fullTitle": "LinkedList remove changes the next pointer so that the linkedlist isn't broken",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "returns node not found if !node",
+      "fullTitle": "LinkedList remove returns node not found if !node",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "if node is at head it calls #removeFromHead",
+      "fullTitle": "LinkedList remove if node is at head it calls #removeFromHead",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "reduces the size by 1",
+      "fullTitle": "LinkedList remove reduces the size by 1",
       "duration": 0,
       "currentRetry": 0,
       "err": {}

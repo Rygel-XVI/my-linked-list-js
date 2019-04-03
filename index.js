@@ -16,6 +16,11 @@ class LinkedList {
     }
   }
 
+  //implement #addToTail()
+
+  //implement #insert(data, index)
+
+///combine remove and removeFromHead. Check if head is null first then ..
   removeFromHead() {
     if (this.size != 0) {
       this.head = this.head.next
@@ -24,26 +29,44 @@ class LinkedList {
   }
 
   remove(data) {
-    let target = false
-    let current = this.head
+    let target
+    let current
+
+//// base cases
+//   when list is empty
+    if (this.head == null) {
+      return "list is empty"
+    }
+
+// when the node is the head
     if (data == this.head.data) {
-      this.removeFromHead()
-    } else {
-      while (current.next != null) {
-       if (current.next.data === data) {
-          target = current
-          break
-        } else {
-          current = current.next
-        }
-      }
-      if (target != false) {
-        target.next = target.next.next
+      return this.removeFromHead()
+    }
+
+// set inital values for target and current
+    target = false
+    current = this.head
+
+// while we are not at the last node, check if current is the target node. If it is update target and
+    while (current.next != null) {
+     if (current.next.data === data) {
         this.size -= 1
+        current.next = current.next.next
+        return current
+
+        // break
       } else {
-        return 'node not found'
+        current = current.next
       }
     }
+
+    // if (target != false) {
+    //   target.next = target.next.next
+    //   this.size -= 1
+    // } else {
+      return 'node not found'
+    // }
+
   }
 
   find(data) {
