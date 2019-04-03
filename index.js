@@ -20,7 +20,7 @@ class LinkedList {
 
   //implement #insert(data, index)
 
-///combine remove and removeFromHead. Check if head is null first then ..
+///combine remove and removeFromHead. Check if head is null first then decrement the size and move the head to head.next.
   removeFromHead() {
     if (this.size != 0) {
       this.head = this.head.next
@@ -32,7 +32,6 @@ class LinkedList {
     let target
     let current
 
-//// base cases
 //   when list is empty
     if (this.head == null) {
       return "list is empty"
@@ -47,7 +46,7 @@ class LinkedList {
     target = false
     current = this.head
 
-// while we are not at the last node, check if current is the target node. If it is update target and
+// while we are not at the last node check if current.next has the data. If it does move the next pointer over to remove the current.next Node from the list and decreases the size.
     while (current.next != null) {
      if (current.next.data === data) {
         this.size -= 1
