@@ -53,20 +53,11 @@ class LinkedList {
         this.size -= 1
         current.next = current.next.next
         return current
-
-        // break
       } else {
         current = current.next
       }
     }
-
-    // if (target != false) {
-    //   target.next = target.next.next
-    //   this.size -= 1
-    // } else {
-      return 'node not found'
-    // }
-
+    return 'node not found'
   }
 
   find(data) {
