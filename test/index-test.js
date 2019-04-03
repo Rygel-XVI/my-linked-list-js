@@ -110,6 +110,10 @@ describe('LinkedList', function() {
       expect(list1.find(list1.head.data).data).to.be.equal(list1.head.data)
     })
 
+    it('returns null when the list is empty', function() {
+      expect(list2.find('something')).to.be.equal(null)
+    })
+
   })
 
   describe('remove', function() {

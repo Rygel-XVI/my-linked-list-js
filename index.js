@@ -60,12 +60,15 @@ class LinkedList {
   }
 
   find(data) {
-    let current = this.head
-    while (current.next != null) {
-      if (current.data === data) {
-        return current
-      } else {
-        current = current.next
+    let current
+    if (this.head != null) {
+      current = this.head
+      while (current.next != null) {
+        if (current.data === data) {
+          return current
+        } else {
+          current = current.next
+        }
       }
     }
     return null
