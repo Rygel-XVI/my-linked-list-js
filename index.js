@@ -59,6 +59,8 @@ class LinkedList {
     return 'node not found'
   }
 
+
+// finds the Node that contains the data. If it doesn't exist returns null
   find(data) {
     let current
     if (this.head != null) {

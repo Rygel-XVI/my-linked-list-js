@@ -153,4 +153,21 @@ describe('LinkedList', function() {
     })
   })
 
+  describe('addToTail', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
+
+    it('increments the size by 1', function() {
+      expect(list1.addToTail("first").size).to.be.equal(1)
+      expect(list1.addToTail('second').size).to.be.equal(2)
+    })
+
+    it('contains nodes with the data in the list', function() {
+      let node = list1.find("first")
+      expect(node.data).to.be.equal("first")
+    })
+
+  })
 });
