@@ -6,9 +6,9 @@ class LinkedList {
   }
 
   addToHead(data) {
+    let node
     if (!!data) {
-      let node = new Node(data, this.head)
-
+      node = new Node(data, this.head)
       this.head = node
       this.size += 1
     } else {
