@@ -176,4 +176,30 @@ describe('LinkedList', function() {
     })
 
   })
-});
+
+  describe('insertAtIndex', function() {
+    before(() => {
+      list1 = new LinkedList
+      list2 = new LinkedList
+    })
+
+    it('inserts a node into the list at the head and it is empty', function() {
+      let node = list1.insertAtIndex('insert at head', 0)
+      expect(list1.size).to.be.equal(1)
+      expect(list1.find('insert at head')).to.be.true
+    })
+
+    it('it inserts in the middle', function() {
+      list1.insertAtIndex("inserted at 1",1)
+      list1.insertAtIndex("inserted at 1 take 2",1)
+      expect(list1.find("inserted at 1")).to.be.true
+      expect(list1.find("inserted at 1 take 2")).to.be.true
+    })
+
+    it('returns null if index is > size', function() {
+      list1.insertAtIndex("inserted at 10",10)
+      expect(list1.find("inserted at 10")).to.be.equal(null)
+
+    })
+  })
+})

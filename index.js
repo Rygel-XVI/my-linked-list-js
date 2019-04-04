@@ -46,6 +46,21 @@ class LinkedList {
   }
 
   //implement #insert(data, index)
+  insertAtIndex(data, index) {
+    //check if !!data and if size > index and if index > 0
+    if (!!data) {
+      let dupSize = this.size
+      // if (dupSize > index && index >= 0) {
+      //   if ()
+      // }
+    }
+
+    // transverse the list by decrementing size until you hit .next of it
+
+    // make new Node w/ next of current.next
+    // make current.next = new node
+
+  }
 
 ///combine remove and removeFromHead. Check if head is null first then decrement the size and move the head to head.next.
   removeFromHead() {
