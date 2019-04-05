@@ -45,14 +45,37 @@ class LinkedList {
     }
   }
 
-  //implement #insert(data, index)
+  // implement #insert(data, index)
   insertAtIndex(data, index) {
-    //check if !!data and if size > index and if index > 0
+    let i
+    let node
+    let current
+    // check if !!data and if size > index and if index > 0
     if (!!data) {
-      let dupSize = this.size
-      // if (dupSize > index && index >= 0) {
-      //   if ()
-      // }
+      current = this.head
+      i = this.size
+
+    // base case if list is empty
+    if ((current == null && index == 1) || index === i) {
+      this.addToHead(data)
+    }
+
+      if (i > index && index >= 0) {
+
+        while (i > index) {
+          if (i - 1 === index) {
+            node = new Node(data, current.next)
+            current.next = node
+            this.size += 1
+            return true
+          }
+          current = current.next
+          i -= 1
+        }
+
+      }
+    } else {
+      return false
     }
 
     // transverse the list by decrementing size until you hit .next of it
@@ -104,9 +127,15 @@ class LinkedList {
 
 // finds the Node that contains the data. If it doesn't exist returns null
   find(data) {
-    let current
-    if (this.head != null) {
-      current = this.head
+
+    let current = this.head
+    if (this.head === null) {
+      return null
+    }
+    if (current.data === data) {
+      return current
+    }
+    if (current != null) {
       while (current.next != null) {
         if (current.data === data) {
           return current

@@ -185,8 +185,11 @@ describe('LinkedList', function() {
 
     it('inserts a node into the list at the head and it is empty', function() {
       let node = list1.insertAtIndex('insert at head', 0)
+      let found = list1.find('insert at head')
+
       expect(list1.size).to.be.equal(1)
-      expect(list1.find('insert at head')).to.be.true
+      expect(found.data).to.be.equal('insert at head')
+      expect(found).to.be.equal(list1.head)
     })
 
     it('it inserts in the middle', function() {
@@ -196,10 +199,13 @@ describe('LinkedList', function() {
       expect(list1.find("inserted at 1 take 2")).to.be.true
     })
 
-    it('returns null if index is > size', function() {
+    it('returns false if index is > size', function() {
       list1.insertAtIndex("inserted at 10",10)
-      expect(list1.find("inserted at 10")).to.be.equal(null)
+      expect(list1.find("inserted at 10")).to.be.false
+    })
 
+    it('returns false if no data is given', function() {
+      expect(list1.insertAtIndex()).to.be.false
     })
   })
 })
