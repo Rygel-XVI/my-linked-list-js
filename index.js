@@ -129,7 +129,7 @@ class LinkedList {
   find(data) {
 
     let current = this.head
-    if (this.head === null) {
+    if (current === null) {
       return null
     }
     if (current.data === data) {
