@@ -75,6 +75,9 @@ describe('LinkedList', function() {
     })
 
     it('removes the most recently added node', function() {
+      list1.addToHead("second node")
+      expect(list1.head.data).to.be.equal("second node")
+      list1.removeFromHead()
       expect(list1.head.data).to.be.equal("first node")
     })
 
