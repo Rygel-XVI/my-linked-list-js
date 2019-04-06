@@ -203,8 +203,8 @@ describe('LinkedList', function() {
     })
 
     it('it inserts in the middle', function() {
-      list1.insertAtIndex("inserted at 1",1)
-      list1.insertAtIndex("inserted at 1 take 2",1)
+      expect(list1.insertAtIndex("inserted at 1",1)).to.be.true
+      expect(list1.insertAtIndex("inserted at 1 take 2",1)).to.be.true
       expect(list1.find("inserted at 1")).to.be.true
       expect(list1.find("inserted at 1 take 2")).to.be.true
     })

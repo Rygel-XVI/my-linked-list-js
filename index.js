@@ -76,12 +76,6 @@ class LinkedList {
     } else {
       return false
     }
-
-    // transverse the list by decrementing size until you hit .next of it
-
-    // make new Node w/ next of current.next
-    // make current.next = new node
-
   }
 
 ///combine remove and removeFromHead. Check if head is null first then decrement the size and move the head to head.next.
