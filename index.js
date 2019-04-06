@@ -49,23 +49,23 @@ class LinkedList {
 
   // implement #insert(data, index)
   insertAtIndex(data, index) {
-    let i
+    let size
     let node
     let current
     // check if !!data and if size > index and if index > 0
     if (!!data) {
       current = this.head
-      i = this.size
+      size = this.size
 
     // base case if list is empty
-    if ((current == null && index == 1) || index === i) {
+    if ((current == null && index == 1) || index === size) {
       this.addToHead(data)
     }
 
-      if (i > index && index >= 0) {
+      if (size > index && index >= 0) {
 
-        while (i > index) {
-          if (i - 1 === index) {
+        while (size > index) {
+          if (size - 1 === index) {
             node = new Node(data, current.next)
             current.next = node
             this.size += 1
