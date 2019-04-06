@@ -72,7 +72,7 @@ class LinkedList {
             return true
           }
           current = current.next
-          i -= 1
+          size -= 1
         }
 
       }
