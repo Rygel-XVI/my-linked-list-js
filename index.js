@@ -47,27 +47,27 @@ class LinkedList {
     }
   }
 
-  // implement #insert(data, index)
   insertAtIndex(data, index) {
     let node
     let current
     let size = this.size
 
-    // check if !!data and if size > index and if index > 0
+// check if !!data and if index is within bounds
     if (!!data && index >= size - 1 && index >= 0) {
       current = this.head
 
-    // base case if list is empty or if adding to head
+// base case if list is empty or if adding to head
       if (current == null && index === 0 || index === size-1) {
         this.addToHead(data)
         return true
       }
-
+// base case when adding to tail
       if (index === 1) {
         this.addToTail(data)
         return true
       }
 
+// find spot before index and insert to next Node
       while (size > index) {
         if (size - 1 === index) {
           node = new Node(data, current.next)
@@ -79,9 +79,8 @@ class LinkedList {
         size -= 1
       }
 
-    } else {
-      return false
     }
+    return false
   }
 
 ///combine remove and removeFromHead. Check if head is null first then decrement the size and move the head to head.next.
