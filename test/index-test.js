@@ -210,8 +210,8 @@ describe('LinkedList', function() {
     })
 
     it('returns false if index is > size', function() {
-      list1.insertAtIndex("inserted at 10",10)
-      expect(list1.find("inserted at 10")).to.be.false
+      list1.insertAtIndex("inserted at 10", 10)
+      expect(list1.find("inserted at 10")).to.be.equal(null)
     })
 
     it('returns false if no data is given', function() {
