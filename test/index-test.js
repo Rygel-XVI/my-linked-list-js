@@ -165,8 +165,13 @@ describe('LinkedList', function() {
 
     it('increments the size by 1', function() {
       list1.addToTail("first")
+      expect(list1.find("first").data).to.be.equal("first")
+      expect(list1.find("first").next).to.be.equal(null)
       expect(list1.size).to.be.equal(1)
       list1.addToTail('second')
+      expect(list1.find("second").data).to.be.equal("second")
+      expect(list1.find("second").next).to.be.equal(null)
+      expect(list1.find("first").next).to.be.equal(list1.find("second"))
       expect(list1.size).to.be.equal(2)
     })
 
