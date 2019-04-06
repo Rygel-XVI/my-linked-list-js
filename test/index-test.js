@@ -99,7 +99,10 @@ describe('LinkedList', function() {
     })
 
     it('returns the node with the data you are looking for', function() {
+      expect(list1.find("first node").data).to.be.equal("first node")
       expect(list1.find("second node").data).to.be.equal('second node')
+      expect(list1.find("third node").data).to.be.equal("third node")
+      expect(list1.find("fourth node").data).to.be.equal("fourth node")
     })
 
     it('returns null if no node with the data is found', function() {
@@ -191,7 +194,6 @@ describe('LinkedList', function() {
     it('inserts a node into the list at the head and it is empty', function() {
       let node = list1.insertAtIndex('insert at head', 0)
       let found = list1.find('insert at head')
-
       expect(list1.size).to.be.equal(1)
       expect(found.data).to.be.equal('insert at head')
       expect(found).to.be.equal(list1.head)
