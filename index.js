@@ -95,21 +95,17 @@ class LinkedList {
 
   remove(data) {
     let target
-    let current
+    let current = this.head
 
 //   when list is empty
-    if (this.head == null) {
+    if (current === null) {
       return "list is empty"
     }
 
 // when the node is the head
-    if (data == this.head.data) {
+    if (data === current.data) {
       return this.removeFromHead()
     }
-
-// set inital values for target and current
-    target = false
-    current = this.head
 
 // while we are not at the last node check if current.next has the data. If it does move the next pointer over to remove the current.next Node from the list and decreases the size.
     while (current.next != null) {
