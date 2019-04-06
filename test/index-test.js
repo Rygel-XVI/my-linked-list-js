@@ -194,19 +194,24 @@ describe('LinkedList', function() {
       list2 = new LinkedList
     })
 
-    it('inserts a node into the list at the head and it is empty', function() {
+    it('inserts a node into the list at the head of an empty list', function() {
       let node = list1.insertAtIndex('insert at head', 0)
-      let found = list1.find('insert at head')
       expect(list1.size).to.be.equal(1)
-      expect(found.data).to.be.equal('insert at head')
-      expect(found).to.be.equal(list1.head)
+      expect(list1.find('insert at head').data).to.be.equal('insert at head')
+      expect(list1.find('insert at head')).to.be.equal(list1.head)
+    })
+
+    it('inserts a node at the head', function() {
+
     })
 
     it('it inserts in the middle', function() {
       expect(list1.insertAtIndex("inserted at 1",1)).to.be.true
+      expect(list1.size).to.be.equal(2)
       expect(list1.insertAtIndex("inserted at 1 take 2",1)).to.be.true
-      expect(list1.find("inserted at 1")).to.be.true
-      expect(list1.find("inserted at 1 take 2")).to.be.true
+      expect(list1.size).to.be.equal(3)
+      expect(list1.find("inserted at 1").data).to.be.equal("inserted at 1")
+      expect(list1.find("inserted at 1 take 2").data).to.be.equal("inserted at 1 take 2")
     })
 
     it('returns false if index is > size', function() {

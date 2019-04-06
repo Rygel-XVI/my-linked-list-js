@@ -58,8 +58,14 @@ class LinkedList {
       current = this.head
 
     // base case if list is empty or if adding to head
-      if ((current == null && index === 0) || index === size - 1) {
+      if (current == null && index === 0 || index === size-1) {
         this.addToHead(data)
+        return true
+      }
+
+      if (index === 1) {
+        this.addToTail(data)
+        return true
       }
 
       while (size > index) {
