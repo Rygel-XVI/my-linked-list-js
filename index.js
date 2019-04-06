@@ -17,29 +17,30 @@ class LinkedList {
   }
 
   addToTail(data) {
-    let current
     let node
+    let current = this.head
+
     if (!!data) {
 
       // when list is empty just add to head
-      if (this.head === null) {
-        node = new Node(data, this.head)
-        this.head = node
+      if (current === null) {
+        this.addToHead(data)
+        // node = new Node(data, this.head)
+        // this.head = node
       } else {
       // otherwise find the end of the list and add a Node
-        current = this.head
 
         while (current !== null) {
           if (current.next === null) {
             node = new Node(data, null)
             current.next = node
+            this.size += 1
             break
           }
           current = current.next
         }
       }
 
-      this.size += 1
     } else {
       return null
     }
