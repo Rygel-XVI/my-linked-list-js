@@ -42,7 +42,6 @@ class LinkedList {
           size -= 1
         }
       }
-
     } else {
       return null
     }
