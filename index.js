@@ -127,26 +127,16 @@ class LinkedList {
 
 // finds the Node that contains the data. If it doesn't exist returns null
   find(data) {
-
     let current = this.head
-    if (current === null) {
-      return null
-    }
-    if (current.data === data) {
-      return current
-    }
-    if (current != null) {
-      while (current.next != null) {
+      while (current != null) {
         if (current.data === data) {
           return current
         } else {
           current = current.next
         }
       }
-    }
     return null
   }
-
 }
 
 class Node {
